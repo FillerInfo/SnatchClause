@@ -17,7 +17,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 					  "Academics",
 					  "Life",
 					  "Cars",
-					  "Famous People"
+					  "Famous People",
+					  "Beverages"
 	]
 
 	@IBOutlet weak var team1Slider: UISlider!
@@ -60,6 +61,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 		team2Slider.setValue(team2Slider.value + 1, animated: true)
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "MenuToGameSegue",
+		  let nextVC = segue.destination as? GameViewController
+	   {
+			nextVC.wordList = ["do this here"]
+	   }
+	}
 	
 	@IBAction func playButtonPressed(_ sender: Any) {
 		performSegue(withIdentifier: "MenuToGameSegue", sender: self)
