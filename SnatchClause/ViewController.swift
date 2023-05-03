@@ -65,7 +65,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 		if segue.identifier == "MenuToGameSegue",
 		  let nextVC = segue.destination as? GameViewController
 	   {
-			nextVC.wordList = ["do this here"]
+			nextVC.wordList = ["do this here", "a", "b", "c"]
 	   }
 	}
 	
