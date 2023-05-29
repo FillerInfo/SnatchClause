@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
 	
@@ -16,11 +17,16 @@ class GameViewController: UIViewController {
 	@IBOutlet weak var wordLabel: UILabel!
 	@IBOutlet weak var actionButton: UIButton!
 	
+	let THE_WORD_TIME = 15
+	let THE_ROUND_TIME = 90
+	let THE_INSTRUCTION_TIME = 3
+	
 	var wordTime: Int = 15
 	var roundTime: Int = 90
 	var instructionTime: Int = 0
 	
 	let gameTimer = DispatchQueue(label: "gameTimer", qos: .background)
+	var player: AVAudioPlayer?
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +36,8 @@ class GameViewController: UIViewController {
 		wordLabel.text = wordList.randomElement()?.uppercased()
 		actionButton.setTitle("Next Word", for: .normal)
 		
-		wordTime = 15
-		roundTime = 5
+		wordTime = THE_WORD_TIME
+		roundTime = THE_ROUND_TIME
 		instructionTime = 0
 		
 		gameTimer.async {
@@ -48,14 +54,13 @@ class GameViewController: UIViewController {
 				if self.wordTime <= 0 {
 					DispatchQueue.main.async {
 						self.wordLabel.text = self.wordList.randomElement()?.uppercased()
+						self.wordTime = self.THE_WORD_TIME
 						
-						self.wordTime = 15
-						
-						self.instructionTime = 3
+						self.instructionTime = self.THE_INSTRUCTION_TIME
 						self.instructionLabel.text = "Pass!"
 						self.instructionLabel.isHidden = false
 						
-						// play beep here!
+						self.playSound(sound: "newword", ext: "mp3")
 						print("TIME UP NEXT WORD")
 					}
 				}
@@ -67,7 +72,7 @@ class GameViewController: UIViewController {
 				}
 			}
 			
-			// explode here!! play sound, show instruction
+			self.playSound(sound: "boom", ext: "mp3")
 			print("GAME OVER!!")
 			DispatchQueue.main.async {
 				self.backgroundView.backgroundColor = .orange
@@ -81,9 +86,31 @@ class GameViewController: UIViewController {
 	@IBAction func onNewWordPressed(_ sender: Any) {
 		if roundTime > 0 {
 			wordLabel.text = wordList.randomElement()?.uppercased()
-			wordTime = 15
+			wordTime = THE_WORD_TIME
 		} else {
 			self.dismiss(animated: true)
+		}
+	}
+
+	func playSound(sound: String, ext: String) {
+		guard let url = Bundle.main.url(forResource: sound, withExtension: ext) else { return }
+
+		do {
+			try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+			try AVAudioSession.sharedInstance().setActive(true)
+
+			/* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+			player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+			/* iOS 10 and earlier require the following line:
+			player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+			guard let player = player else { return }
+
+			player.play()
+
+		} catch let error {
+			print("sound error", error.localizedDescription)
 		}
 	}
 }

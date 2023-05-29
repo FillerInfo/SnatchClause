@@ -23,7 +23,9 @@
 		A9F2E9A22A244E8F00F99BAB /* movies and television.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A12A244E8F00F99BAB /* movies and television.rtf */; };
 		A9F2E9A42A244EA200F99BAB /* sports.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A32A244EA200F99BAB /* sports.rtf */; };
 		A9F2E9A62A244EB800F99BAB /* the great outdoors.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A52A244EB800F99BAB /* the great outdoors.rtf */; };
-		A9F2E9A82A244FD800F99BAB /* famous people.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A72A244FD800F99BAB /* famous people.rtf */; };
+		A9F2E9AA2A2457A100F99BAB /* famous people.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A92A2457A100F99BAB /* famous people.rtf */; };
+		A9F2E9AD2A24582F00F99BAB /* boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9AB2A24582F00F99BAB /* boom.mp3 */; };
+		A9F2E9AE2A24582F00F99BAB /* newword.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9AC2A24582F00F99BAB /* newword.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +47,9 @@
 		A9F2E9A12A244E8F00F99BAB /* movies and television.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "movies and television.rtf"; sourceTree = "<group>"; };
 		A9F2E9A32A244EA200F99BAB /* sports.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = sports.rtf; sourceTree = "<group>"; };
 		A9F2E9A52A244EB800F99BAB /* the great outdoors.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "the great outdoors.rtf"; sourceTree = "<group>"; };
-		A9F2E9A72A244FD800F99BAB /* famous people.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "famous people.rtf"; sourceTree = "<group>"; };
+		A9F2E9A92A2457A100F99BAB /* famous people.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "famous people.rtf"; sourceTree = "<group>"; };
+		A9F2E9AB2A24582F00F99BAB /* boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = boom.mp3; sourceTree = "<group>"; };
+		A9F2E9AC2A24582F00F99BAB /* newword.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newword.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +66,6 @@
 		A987B92629C164D300DD8860 = {
 			isa = PBXGroup;
 			children = (
-				A9F2E9A72A244FD800F99BAB /* famous people.rtf */,
 				A987B93129C164D300DD8860 /* SnatchClause */,
 				A987B93029C164D300DD8860 /* Products */,
 			);
@@ -82,6 +85,8 @@
 				A987B93229C164D300DD8860 /* AppDelegate.swift */,
 				A987B93429C164D300DD8860 /* SceneDelegate.swift */,
 				A987B93629C164D300DD8860 /* ViewController.swift */,
+				A9F2E9AB2A24582F00F99BAB /* boom.mp3 */,
+				A9F2E9AC2A24582F00F99BAB /* newword.mp3 */,
 				A9F2E99B2A244E4B00F99BAB /* food.rtf */,
 				A9F2E99D2A244E6200F99BAB /* household objects.rtf */,
 				A9F2E99F2A244E7700F99BAB /* life.rtf */,
@@ -96,6 +101,7 @@
 				A987B93B29C164D300DD8860 /* Assets.xcassets */,
 				A987B93D29C164D300DD8860 /* LaunchScreen.storyboard */,
 				A987B94029C164D300DD8860 /* Info.plist */,
+				A9F2E9A92A2457A100F99BAB /* famous people.rtf */,
 			);
 			path = SnatchClause;
 			sourceTree = "<group>";
@@ -160,7 +166,9 @@
 			files = (
 				A987B93F29C164D300DD8860 /* LaunchScreen.storyboard in Resources */,
 				A9F2E9982A244DCA00F99BAB /* cars.rtf in Resources */,
-				A9F2E9A82A244FD800F99BAB /* famous people.rtf in Resources */,
+				A9F2E9AA2A2457A100F99BAB /* famous people.rtf in Resources */,
+				A9F2E9AE2A24582F00F99BAB /* newword.mp3 in Resources */,
+				A9F2E9AD2A24582F00F99BAB /* boom.mp3 in Resources */,
 				A9F2E99C2A244E4B00F99BAB /* food.rtf in Resources */,
 				A9F2E9962A244D2300F99BAB /* academics.rtf in Resources */,
 				A9F2E9A02A244E7700F99BAB /* life.rtf in Resources */,
