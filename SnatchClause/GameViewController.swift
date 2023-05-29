@@ -27,7 +27,7 @@ class GameViewController: UIViewController {
 		
 		backgroundView.backgroundColor = .white
 		instructionLabel.isHidden = true
-		wordLabel.text = wordList.randomElement()
+		wordLabel.text = wordList.randomElement()?.uppercased()
 		actionButton.setTitle("Next Word", for: .normal)
 		
 		wordTime = 15
@@ -47,7 +47,7 @@ class GameViewController: UIViewController {
 				
 				if self.wordTime <= 0 {
 					DispatchQueue.main.async {
-						self.wordLabel.text = self.wordList.randomElement()
+						self.wordLabel.text = self.wordList.randomElement()?.uppercased()
 						
 						self.wordTime = 15
 						
@@ -80,7 +80,7 @@ class GameViewController: UIViewController {
 
 	@IBAction func onNewWordPressed(_ sender: Any) {
 		if roundTime > 0 {
-			wordLabel.text = wordList.randomElement()
+			wordLabel.text = wordList.randomElement()?.uppercased()
 			wordTime = 15
 		} else {
 			self.dismiss(animated: true)

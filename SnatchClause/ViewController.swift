@@ -17,10 +17,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 					  "Academics",
 					  "Life",
 					  "Cars",
-					  "Famous People",
-					  "Beverages"
+					  "Famous People"
 	]
-
+	
 	@IBOutlet weak var team1Slider: UISlider!
 	@IBOutlet weak var team2Slider: UISlider!
 	
@@ -31,6 +30,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 		
 		categoryPicker.dataSource = self
 		categoryPicker.delegate = self
+		
+		let file = "wordlist"
+		
+		if let rtfPath = Bundle.main.url(forResource: file, withExtension: "rtf") {
+			do {
+				let attributedStringWithRtf: NSAttributedString = try NSAttributedString(url: rtfPath, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
+				print(attributedStringWithRtf.string)
+			} catch let error {
+				print("FUCK \(error)")
+			}
+		}
 	}
 	
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
