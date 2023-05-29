@@ -51,6 +51,13 @@ class GameViewController: UIViewController {
 				print("round: ", self.roundTime)
 				print("ins: ", self.instructionTime)
 				
+				if self.instructionTime <= 0 {
+					DispatchQueue.main.async {
+						print("HIDE NOW!!!!!!!!!!!")
+						self.instructionLabel.isHidden = true
+					}
+				}
+				
 				if self.wordTime <= 0 {
 					DispatchQueue.main.async {
 						self.wordLabel.text = self.wordList.randomElement()?.uppercased()
@@ -62,12 +69,6 @@ class GameViewController: UIViewController {
 						
 						self.playSound(sound: "newword", ext: "mp3")
 						print("TIME UP NEXT WORD")
-					}
-				}
-				
-				if self.instructionTime <= 0 {
-					DispatchQueue.main.async {
-						self.instructionLabel.isHidden = true
 					}
 				}
 			}
