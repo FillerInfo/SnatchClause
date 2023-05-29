@@ -15,6 +15,15 @@
 		A987B93F29C164D300DD8860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A987B93D29C164D300DD8860 /* LaunchScreen.storyboard */; };
 		A987B94729C175C900DD8860 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987B94629C175C900DD8860 /* GameViewController.swift */; };
 		A9F2E9922A24458100F99BAB /* wordlist.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9912A24458100F99BAB /* wordlist.rtf */; };
+		A9F2E9962A244D2300F99BAB /* academics.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9952A244D2300F99BAB /* academics.rtf */; };
+		A9F2E9982A244DCA00F99BAB /* cars.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9972A244DCA00F99BAB /* cars.rtf */; };
+		A9F2E99C2A244E4B00F99BAB /* food.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E99B2A244E4B00F99BAB /* food.rtf */; };
+		A9F2E99E2A244E6200F99BAB /* household objects.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E99D2A244E6200F99BAB /* household objects.rtf */; };
+		A9F2E9A02A244E7700F99BAB /* life.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E99F2A244E7700F99BAB /* life.rtf */; };
+		A9F2E9A22A244E8F00F99BAB /* movies and television.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A12A244E8F00F99BAB /* movies and television.rtf */; };
+		A9F2E9A42A244EA200F99BAB /* sports.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A32A244EA200F99BAB /* sports.rtf */; };
+		A9F2E9A62A244EB800F99BAB /* the great outdoors.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A52A244EB800F99BAB /* the great outdoors.rtf */; };
+		A9F2E9A82A244FD800F99BAB /* famous people.rtf in Resources */ = {isa = PBXBuildFile; fileRef = A9F2E9A72A244FD800F99BAB /* famous people.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		A987B94029C164D300DD8860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A987B94629C175C900DD8860 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A9F2E9912A24458100F99BAB /* wordlist.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = wordlist.rtf; sourceTree = "<group>"; };
+		A9F2E9952A244D2300F99BAB /* academics.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = academics.rtf; sourceTree = "<group>"; };
+		A9F2E9972A244DCA00F99BAB /* cars.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = cars.rtf; sourceTree = "<group>"; };
+		A9F2E99B2A244E4B00F99BAB /* food.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = food.rtf; sourceTree = "<group>"; };
+		A9F2E99D2A244E6200F99BAB /* household objects.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "household objects.rtf"; sourceTree = "<group>"; };
+		A9F2E99F2A244E7700F99BAB /* life.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = life.rtf; sourceTree = "<group>"; };
+		A9F2E9A12A244E8F00F99BAB /* movies and television.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "movies and television.rtf"; sourceTree = "<group>"; };
+		A9F2E9A32A244EA200F99BAB /* sports.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = sports.rtf; sourceTree = "<group>"; };
+		A9F2E9A52A244EB800F99BAB /* the great outdoors.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "the great outdoors.rtf"; sourceTree = "<group>"; };
+		A9F2E9A72A244FD800F99BAB /* famous people.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "famous people.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +62,7 @@
 		A987B92629C164D300DD8860 = {
 			isa = PBXGroup;
 			children = (
+				A9F2E9A72A244FD800F99BAB /* famous people.rtf */,
 				A987B93129C164D300DD8860 /* SnatchClause */,
 				A987B93029C164D300DD8860 /* Products */,
 			);
@@ -63,6 +82,14 @@
 				A987B93229C164D300DD8860 /* AppDelegate.swift */,
 				A987B93429C164D300DD8860 /* SceneDelegate.swift */,
 				A987B93629C164D300DD8860 /* ViewController.swift */,
+				A9F2E99B2A244E4B00F99BAB /* food.rtf */,
+				A9F2E99D2A244E6200F99BAB /* household objects.rtf */,
+				A9F2E99F2A244E7700F99BAB /* life.rtf */,
+				A9F2E9A12A244E8F00F99BAB /* movies and television.rtf */,
+				A9F2E9A32A244EA200F99BAB /* sports.rtf */,
+				A9F2E9A52A244EB800F99BAB /* the great outdoors.rtf */,
+				A9F2E9972A244DCA00F99BAB /* cars.rtf */,
+				A9F2E9952A244D2300F99BAB /* academics.rtf */,
 				A9F2E9912A24458100F99BAB /* wordlist.rtf */,
 				A987B93829C164D300DD8860 /* Main.storyboard */,
 				A987B94629C175C900DD8860 /* GameViewController.swift */,
@@ -132,9 +159,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A987B93F29C164D300DD8860 /* LaunchScreen.storyboard in Resources */,
+				A9F2E9982A244DCA00F99BAB /* cars.rtf in Resources */,
+				A9F2E9A82A244FD800F99BAB /* famous people.rtf in Resources */,
+				A9F2E99C2A244E4B00F99BAB /* food.rtf in Resources */,
+				A9F2E9962A244D2300F99BAB /* academics.rtf in Resources */,
+				A9F2E9A02A244E7700F99BAB /* life.rtf in Resources */,
 				A987B93C29C164D300DD8860 /* Assets.xcassets in Resources */,
+				A9F2E99E2A244E6200F99BAB /* household objects.rtf in Resources */,
 				A9F2E9922A24458100F99BAB /* wordlist.rtf in Resources */,
+				A9F2E9A22A244E8F00F99BAB /* movies and television.rtf in Resources */,
 				A987B93A29C164D300DD8860 /* Main.storyboard in Resources */,
+				A9F2E9A62A244EB800F99BAB /* the great outdoors.rtf in Resources */,
+				A9F2E9A42A244EA200F99BAB /* sports.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

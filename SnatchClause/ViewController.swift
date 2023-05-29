@@ -9,16 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 	
-	let categories = ["The Great Outdoors",
-					  "Sports",
-					  "Movies and Television",
-					  "Household Objects",
-					  "Food",
-					  "Academics",
-					  "Life",
-					  "Cars",
-					  "Famous People"
-	]
+	var categories = ["BROKEN"]
 	
 	@IBOutlet weak var team1Slider: UISlider!
 	@IBOutlet weak var team2Slider: UISlider!
@@ -31,16 +22,19 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 		categoryPicker.dataSource = self
 		categoryPicker.delegate = self
 		
-		let file = "wordlist"
-		
-		if let rtfPath = Bundle.main.url(forResource: file, withExtension: "rtf") {
+		categories = fileAsString(file: "wordlist", ext: "rtf").components(separatedBy: "\n")
+	}
+	
+	func fileAsString(file: String, ext: String) -> String {
+		if let rtfPath = Bundle.main.url(forResource: file, withExtension: ext) {
 			do {
 				let attributedStringWithRtf: NSAttributedString = try NSAttributedString(url: rtfPath, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.rtf], documentAttributes: nil)
-				print(attributedStringWithRtf.string)
+				return attributedStringWithRtf.string
 			} catch let error {
 				print("FUCK \(error)")
 			}
 		}
+		return "its broken bro"
 	}
 	
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -75,7 +69,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 		if segue.identifier == "MenuToGameSegue",
 		  let nextVC = segue.destination as? GameViewController
 	   {
-			nextVC.wordList = ["do this here", "a", "b", "c"]
+			nextVC.wordList = fileAsString(file: categories[categoryPicker.selectedRow(inComponent: 0)].lowercased(), ext: "rtf").components(separatedBy: "\n")
 	   }
 	}
 	
